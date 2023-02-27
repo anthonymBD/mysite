@@ -2,10 +2,7 @@
 /* CSS Document */
 
 /* 
-    Created on   : 11/10/2021.
-    Theme Name   : vCamp-Creative Agency & Portfolio HTML5 Template
-    Version      : 1.0.
-    Developed by : (me@heloshape.com) / (www.me.heloshape.com)
+
    
 */
 /**
@@ -3659,6 +3656,8 @@ body .theme-btn-eighteen:hover:before {background: #FF7961;}
   max-width: 46%;
   animation: jumpTwo 5s infinite linear;
 }
+
+.illustration-container img{height:100%;}
 /*^^^^^^^^^^^^^^^^^^^^^ Case Study Section Two ^^^^^^^^^^^^^^^^^^^^^^^^*/
 .case-block-two .img-meta {
   min-height: 350px;

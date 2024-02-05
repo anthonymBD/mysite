@@ -1,0 +1,645 @@
+
+
+@import url('../fonts/gordita/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+/*----Bootstrap css ----- */
+@import url('../vendor/bootstrap/css/bootstrap.min.css');
+/*---- Navbar Css------*/
+@import url('navbar.css');
+/*----Framework css-----*/
+@import url('framework.css');
+/*----- Bootstrap Icons ----------*/
+@import url('../fonts/bootstrap-icons/font-css.css');
+/*---- Font Awesome Icons -------*/
+@import url('../fonts/font-awesome/css/all.min.css');
+/*----------- Fancybox css -------*/
+@import url('../vendor/fancybox/dist/jquery.fancybox.min.css');
+/*----------- Slick Slider -------*/
+@import url('../vendor/slick/slick.css');
+/*----Animate css----*/
+@import url('animate.min.css');
+@import url('custom-animation.css');
+
+/*-------- AOS css ------*/
+@import url('../vendor/aos-next/dist/aos.css');
+
+
+.ctn-preloader {
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -ms-flexbox;
+  height: 100%;
+  justify-content: center;
+  -webkit-justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+  background: #fff;
+}
+.ctn-preloader .animation-preloader {
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+}
+.ctn-preloader .animation-preloader .txt-loading {user-select: none;}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
+  animation: letters-loading 4s infinite;
+  color: var(--heading);
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  top:0;
+  line-height: 70px;
+  position: absolute;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading {
+  font-family: 'gorditabold';
+  font-weight: 500;
+  letter-spacing: 15px;
+  display: inline-block;
+  color: rgb(0 0 0 / 14%);
+  position: relative;
+  font-size: 70px;
+  line-height: 70px;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {animation-delay: 0.2s;}
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+@media screen and (max-width: 500px) {
+  .ctn-preloader .animation-preloader .txt-loading .letters-loading {font-size: 40px; letter-spacing: 10px;}
+}
+/*^^^^^^^^^^^^^^^^^^^^ Scroll Top ^^^^^^^^^^^^^^^^^^^^^*/
+.scroll-top {
+  width:35px;
+  height:35px;
+  line-height: 35px;
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 99;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  background: var(--red-one);
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+.scroll-top:after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 1;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+/*^^^^^^^^^^^^^^^^^^^^ Global Prefix ^^^^^^^^^^^^^^^^^^^^^*/
+::-webkit-scrollbar{ width: 5px; }
+::-webkit-scrollbar-track { background: #fff;}
+::-webkit-scrollbar-thumb { background: #2a2a2a;border-radius: 0;}
+:root {
+  --text-color   : #292929;
+  --heading      : #000;
+  --red-one      : #FB1B1D ;
+  --red-two      : #FB1B1D;
+  --orange-one   : #FF6839;
+  --deep-cyan    : #EBF1EE;
+  --light-cyan   : #F4FAFE;
+  --light-blue   : #F1F7FD;
+  --deep-blue    : #EBF6FF;
+}
+::selection {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+body {
+  font-family: 'gorditaregular';
+  font-weight: normal;
+  font-size: 18px;
+  position: relative;
+  line-height: 1.66em;
+  color: var(--text-color);
+}
+.main-page-wrapper {overflow-x:hidden;}
+h1,h2,h3,h4 {color: var(--heading); font-weight: normal;}
+h1 {font-size: 100px;}
+h2 {font-size: 52px;}
+h3 {font-size: 36px;}
+h4 {font-size: 24px; font-family: 'gorditamedium';}
+::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.6);}
+.dark-bg ::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.5);}
+.dark-bg :-ms-input-placeholder { color: rgba(255, 255, 255, 0.5);}
+/*^^^^^^^^^^^^^^^^^^^^ Prefix Classes ^^^^^^^^^^^^^^^^^^^^^*/
+.style-none {list-style: none; padding-left: 0; margin-bottom: 0;}
+.text-lg {font-size: 24px; line-height: 1.7em;}
+.shapes {position: absolute; z-index: -1;}
+.dark-bg {background-color: #121212;}
+.border-top {border-top: 1px solid rgba(0, 0, 0, 0.08)!important;}
+/*^^^^^^^^^^^^^^^^^^^^ Section Title ^^^^^^^^^^^^^^^^^^^^^^*/
+.name{color:white; margin-bottom:2rem;}
+.title-style-five .title {
+  font-family: 'gorditabold';
+  font-size: 68px;
+  line-height: 1.18em;
+  margin-bottom: 0;
+}
+.title-style-five.white-vr .title {color: #fff;}
+.title-style-five .upper-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  padding-bottom: 12px;
+}
+/*^^^^^^^^^^^^^^^^^^^^^ Theme Button ^^^^^^^^^^^^^^^^^^^^^^*/
+.ripple-btn {position: relative;}
+.ripple-btn:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin: -50px 0 0 -50px;
+  transform: scale(0);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+}
+.ripple-btn:hover:before {
+  transform: scale(1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+body .theme-btn-two {
+  font-family: 'gorditamedium';
+  font-size: 17px;
+  color: var(--heading);
+  padding: 0 40px;
+  text-align: center;
+  line-height: 51px;
+  border: 2px solid var(--heading);
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+body .theme-btn-two:hover {background:var(--red-one); border-color: var(--red-one); color: #fff;}
+body .theme-btn-four {
+  font-family: 'gorditamedium';
+  font-size: 18px;
+  color: #fff;
+  padding: 0 28px;
+  min-width: 180px;
+  text-align: center;
+  line-height: 51px;
+  border: 2px solid var(--red-one);
+  background: var(--red-one);
+  transition: all 0.3s ease-in-out;
+}
+body .theme-btn-four:hover {background: transparent; color: var(--red-one);}
+body .theme-btn-six {
+  font-family: 'gorditamedium';
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding: 0 32px;
+  line-height: 55px;
+  border-radius: 5px;
+  background: var(--red-two);
+  transition: all 0.3s ease-in-out;
+}
+body .theme-btn-six:hover {background: var(--heading);}
+/*^^^^^^^^^^^^^^^^^^^^^^^ Pagination ^^^^^^^^^^^^^^^^^^^^^^*/
+/*^^^^^^^^^^^^^^^^^^^^^ Theme Menu ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.theme-main-menu {
+  position: fixed;
+  z-index: 99;
+  top:0;
+  left:0;
+  right: 0;
+  padding: 30px 65px;
+  transition: all 0.4s ease-out;
+}
+.theme-main-menu .inner-content {position: relative;}
+.theme-main-menu .navbar {position: static;}
+
+/*^^^^^^^^^^^^^^^^^^^^^ Theme Hero Banner Four ^^^^^^^^^^^^^^^^^^^^^^^^*/
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 .1rem rgba(0,0,0, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 0 3rem rgba(0,0,0, 0);
+  }
+}
+.theme-main-menu.sticky-menu.fixed
+{
+  z-index: 990;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #fff;
+  box-shadow: 0 13px 35px -12px rgba(35,35,35,0.1);
+}
+.case-study-one {
+  position: relative;
+  padding: 200px 0 150px;
+  z-index: 1;
+}
+.case-study-one .slider-wrapper {
+  max-width: 1920px;
+  margin: 100px auto 0;
+  transform: translateX(14.2%);
+}
+.case-block-one .img-meta {
+  min-height: 595px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+
+.img-meta img{max-width:300px; max-height:300px; object-fit:cover;}
+.case-block-one .hover-content {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  bottom: 4%;
+  left: 4%;
+  z-index: 1;
+  padding: 50px 22px 30px 50px;
+  color: #fff;
+  background: rgb(235, 0, 0, 0.85);
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.4s ease-in-out;
+}
+.case-block-one .hover-content .icon {
+  width: 65px;
+  height: 65px;
+  padding: 10px;
+  background: var(--heading)000;
+  border-radius: 50%;
+}
+.case-block-one .hover-content blockquote {
+  font-size: 28px;
+  line-height: 1.60em;
+  padding: 35px 0 75px;
+  margin-bottom: 0;
+}
+.case-block-one .hover-content .web {
+  font-family: 'gorditamedium';
+  font-size: 25px;
+  color: #fff;
+  text-decoration: underline;
+}
+.case-block-one .hover-content .arrow {
+  display: inline-block;
+  width: 39px;
+  line-height: 28px;
+  font-size: 16px;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.15);
+}
+.case-block-one .hover-content a:hover .arrow {background: var(--heading);}
+.case-block-one:hover .hover-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+.case_slider_one .item {margin: 0 30px;}
+.case-study-one .slider-arrows li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 28px;
+  margin-left: 12px;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+.case-study-one .slider-arrows li:hover {
+  background: rgba(255, 255, 255, 0.2); 
+  color: #fff;
+  transform: scale(1);
+}
+.case-study-one .shape-one {
+  left: 0;
+  bottom: -110px;
+  animation: fade-in 1s infinite linear;
+}
+/*^^^^^^^^^^^^^^^^^^^^^ Vcamp Text Block Five ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.vcamp-text-block-five .text-wrapper p {
+  padding-top: 55px;
+  margin-bottom: 0;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^ Footer Two ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.vcamp-footer-two.dark-footer {background: #121212;}
+.vcamp-footer-two .bottom-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 35px 0 0;
+  margin-top: 45px;
+}
+.vcamp-footer-two .bottom-footer .copyright {
+  font-size: 16px;
+  color: #373737;
+}
+.vcamp-footer-two.dark-footer .bottom-footer {border-top-color: rgba(255, 255, 255, 0.08);}
+.vcamp-footer-two.dark-footer .bottom-footer .copyright {color: rgba(255, 255, 255, 0.7);}
+/*^^^^^^^^^^^^^^^^^^^^^ Theme Hero Banner One ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.hero-banner-five {position: relative;z-index: 1;}
+.hero-banner-five .video-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 15px 16px 18px 13px;
+  position:relative;
+  animation: ripple 3s linear infinite;
+}
+.hero-banner-five .video-icon::before,
+.hero-banner-five .video-icon::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius: 50%;
+  animation:inherit;
+  animation-delay:1s;
+}
+.hero-banner-five .video-icon::after {
+  animation-delay:3s;
+}
+.hero-banner-five .hero-heading {
+  font-family: 'gorditabold';
+  line-height: 1.1em;
+  padding: 38px 0 64px;
+  margin-bottom: 0;
+}
+.hero-banner-five .hero-sub-heading {color: var(--heading);padding-bottom: 36px;}
+.hero-banner-five .illustration-container {
+  position: absolute;
+  left: 11%;
+  height:600px;
+  top: 0;
+  z-index: -1;
+  max-width: 46%;
+  animation: jumpTwo 5s infinite linear;
+}
+
+.illustration-container img{height:100%;}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^ Vcamp Fancy Banner Seven ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.fancy-banner-seven .inner-content {
+  padding: 75px 60px;
+  background: var(--light-blue);
+}
+.fancy-banner-seven h3 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.fancy-banner-seven p {font-size: 19px; margin-bottom: 0;}
+.fancy-banner-seven p a {
+  font-family: 'gorditamedium';
+  text-decoration: underline;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.fancy-banner-seven p a:hover {color: var(--red-one);}
+.fancy-banner-seven .theme-btn-four {border-radius: 8px; padding: 0 35px;}
+
+/*^^^^^^^^^^^^^^^^^^^^^ Team Section Two ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.team-block-two .img-meta {overflow: hidden; border-radius: 15px; margin-bottom: 30px;}
+.team-block-two .img-meta img {border-radius: 15px; transition: all 0.5s ease-in-out;}
+.team-block-two .img-meta:hover img {transform: scale3d(1.1, 1.1, 1.1);}
+.team-block-two .name {font-size: 24px;}
+.team_slider_two .item {margin: 0 18px;}
+
+/*^^^^^^^^^^^^^^^^^^^^^ Product Section One ^^^^^^^^^^^^^^^^^^^^^^^^*/
+.product-slider-arrow-one li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: var(--heading);
+  font-size: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all 0.3s ease-in-out;
+}
+.product-slider-arrow-one li:hover {
+  background: var(--heading); 
+  color: #fff;
+  transform: scale(1);
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^ Vcamp Fancy Banner Twelve ^^^^^^^^^^^^^^^^^^^^^^^^*/
+ 
+
+
+@media (min-width: 992px) {
+  .container {padding-right: 0;padding-left: 0;}
+}
+/*(min-width: 992px)*/
+ /*(min-width: 1400px)*/
+/*Grid xl Start*/
+@media (max-width: 1399px) {
+  .case_slider_one .item {margin: 0 15px;}
+  .case-block-one .hover-content blockquote {font-size: 25px; padding-bottom: 50px;}
+  .case-block-one .hover-content .web {font-size: 20px;}
+}
+/*(max-width: 1399px)*/
+
+
+
+/*Between Grid xl*/
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .theme-main-menu {padding-left: 35px; padding-right: 35px;}
+  .navbar .navbar-nav .nav-link {margin: 0 22px;}
+  .case-study-one .slider-wrapper {transform: translateX(7%);}
+  .case-block-one .img-meta {min-height: 555px;}
+}
+/*(min-width: 1200px) and (max-width: 1399px)*/
+
+
+
+/*Grid lg Start*/
+@media (max-width: 1199px) {
+  .text-lg {font-size: 19px;}
+  .title-style-five .title {font-size: 45px;}
+  .title-style-five .upper-title {font-size: 13px; padding-bottom: 8px;}
+  .case-study-one {padding: 120px 0 90px;}
+  .vcamp-text-block-five .text-wrapper p {padding-top: 25px;}
+  .hero-banner-five .video-icon {width: 55px; height: 55px; padding: 15px 15px 15px 10p;}
+  .hero-banner-five .hero-sub-heading {padding-bottom: 15px;}
+  .team-block-two .name {font-size: 22px;}
+  .fancy-banner-seven p {font-size: 18px; padding-bottom: 30px;}
+  .fancy-banner-seven .inner-content {padding: 70px 20px;}
+  .fancy-banner-seven .inner-content.bg-white {padding-left: 0; padding-right: 0;}
+  .vcamp-footer-two.dark-footer .bottom-footer .copyright {font-size: 15px;}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1 {font-size: 80px;}
+  .theme-main-menu {padding-left: 20px; padding-right: 20px;}
+  .navbar .navbar-nav .nav-link {margin: 0 18px; font-size: 17px;}
+  .case-study-one .slider-wrapper {transform: translateX(9%);}
+}
+
+
+
+
+/*Grid md Start*/
+@media (max-width: 991px) {
+  h1 {font-size: 60px;}
+  .theme-main-menu {padding: 18px 12px;}
+  body .theme-btn-six {line-height: 50px;}
+  .case-study-one .slider-wrapper {margin: 60px auto 0; transform: none;}
+  .case-block-one .hover-content {position: static; padding: 40px 20px;}
+  .case-block-one .img-meta {min-height: 100%; position: absolute; height: 100%; top: 0;left: 0;}
+  .case-block-one .hover-content .icon {width: 50px; height: 50px;}
+  .case-block-one .hover-content blockquote {font-size: 22px; padding: 20px 0 30px;}
+  .vcamp-footer-two .bottom-footer {margin-top: 15px;}
+  .hero-banner-five .hero-heading {padding-bottom: 45px;}
+  .hero-banner-five .illustration-container {position: static; margin: 40px auto 0; max-width: 500px; width: 100%;}
+  .vcamp-footer-two .bottom-footer .copyright {margin-bottom: 0; font-size: 15px;}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .case-study-one .slider-wrapper {max-width: 720px;}
+}
+
+
+
+
+/*Grid sm Start*/
+@media (max-width: 767px) {
+  .case-study-one .shape-one {bottom: -50px;}
+}
+
+@media (max-width: 575px) {
+  .case-study-one .slider-arrows li,.product-slider-arrow-one li {margin: 0 5px;}
+}
+/*(max-width: 575px)*/
+ 
+
+
+@media (min-width: 992px) {
+  .container {padding-right: 0;padding-left: 0;}
+}
+/*(min-width: 992px)*/
+ /*(min-width: 1400px)*/
+/*Grid xl Start*/
+@media (max-width: 1399px) {
+  .case_slider_one .item {margin: 0 15px;}
+  .case-block-one .hover-content blockquote {font-size: 25px; padding-bottom: 50px;}
+  .case-block-one .hover-content .web {font-size: 20px;}
+}
+/*(max-width: 1399px)*/
+
+
+
+/*Between Grid xl*/
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .theme-main-menu {padding-left: 35px; padding-right: 35px;}
+  .navbar .navbar-nav .nav-link {margin: 0 22px;}
+  .case-study-one .slider-wrapper {transform: translateX(7%);}
+  .case-block-one .img-meta {min-height: 555px;}
+}
+/*(min-width: 1200px) and (max-width: 1399px)*/
+
+
+
+/*Grid lg Start*/
+@media (max-width: 1199px) {
+  .text-lg {font-size: 19px;}
+  .title-style-five .title {font-size: 45px;}
+  .title-style-five .upper-title {font-size: 13px; padding-bottom: 8px;}
+  .case-study-one {padding: 120px 0 90px;}
+  .vcamp-text-block-five .text-wrapper p {padding-top: 25px;}
+  .hero-banner-five .video-icon {width: 55px; height: 55px; padding: 15px 15px 15px 10p;}
+  .hero-banner-five .hero-sub-heading {padding-bottom: 15px;}
+  .team-block-two .name {font-size: 22px;}
+  .fancy-banner-seven p {font-size: 18px; padding-bottom: 30px;}
+  .fancy-banner-seven .inner-content {padding: 70px 20px;}
+  .fancy-banner-seven .inner-content.bg-white {padding-left: 0; padding-right: 0;}
+  .vcamp-footer-two.dark-footer .bottom-footer .copyright {font-size: 15px;}
+}
+/*(max-width: 1199px)*/
+
+
+
+/*Between Grid lg*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1 {font-size: 80px;}
+  .theme-main-menu {padding-left: 20px; padding-right: 20px;}
+  .navbar .navbar-nav .nav-link {margin: 0 18px; font-size: 17px;}
+  .case-study-one .slider-wrapper {transform: translateX(9%);}
+}
+/*(min-width: 992px) and (max-width: 1199px)*/
+
+
+
+/*Grid md Start*/
+@media (max-width: 991px) {
+  h1 {font-size: 60px;}
+  .theme-main-menu {padding: 18px 12px;}
+  body .theme-btn-six {line-height: 50px;}
+  .case-study-one .slider-wrapper {margin: 60px auto 0; transform: none;}
+  .case-block-one .hover-content {position: static; padding: 40px 20px;}
+  .case-block-one .img-meta {min-height: 100%; position: absolute; height: 100%; top: 0;left: 0;}
+  .case-block-one .hover-content .icon {width: 50px; height: 50px;}
+  .case-block-one .hover-content blockquote {font-size: 22px; padding: 20px 0 30px;}
+  .vcamp-footer-two .bottom-footer {margin-top: 15px;}
+  .hero-banner-five .hero-heading {padding-bottom: 45px;}
+  .hero-banner-five .illustration-container {position: static; margin: 40px auto 0; max-width: 500px; width: 100%;}
+  .vcamp-footer-two .bottom-footer .copyright {margin-bottom: 0; font-size: 15px;}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .case-study-one .slider-wrapper {max-width: 720px;}
+}
+
+
+/*Grid sm Start*/
+@media (max-width: 767px) {
+  .case-study-one .shape-one {bottom: -50px;}
+}
+
+
+
+
+/*Extra Small breakpoints*/
+@media (max-width: 575px) {
+  .case-study-one .slider-arrows li,.product-slider-arrow-one li {margin: 0 5px;}
+}
+/*(max-width: 575px)*/

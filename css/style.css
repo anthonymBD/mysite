@@ -9,7 +9,7 @@
 * Importing necessary  Styles.
 **/
 /*----- Fonts ----*/
-@import url('../fonts/recoleta/stylesheet.css');
+
 @import url('../fonts/gordita/stylesheet.css');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 /*----Bootstrap css ----- */
@@ -22,23 +22,19 @@
 @import url('../fonts/bootstrap-icons/font-css.css');
 /*---- Font Awesome Icons -------*/
 @import url('../fonts/font-awesome/css/all.min.css');
-/*----------- Fancybox css -------*/
-@import url('../vendor/fancybox/dist/jquery.fancybox.min.css');
+
 /*----------- Slick Slider -------*/
 @import url('../vendor/slick/slick.css');
 /*----Animate css----*/
 @import url('animate.min.css');
 @import url('custom-animation.css');
-/*----- Select Css ------*/
-@import url('../vendor/selectize.js/selectize.css');
-/*----- Animated Headline ------*/
-@import url('../vendor/animated-headline-master/style.css');
-/*----- Fullpage Scroll ------*/
-@import url('../vendor/fullScroll/jquery.pagepiling.css');
+
+
+
+
 /*-------- AOS css ------*/
 @import url('../vendor/aos-next/dist/aos.css');
-/*------- Phone Number Selector -------*/
-@import url('../vendor/intl-tel/build/css/intlTelInput.css');
+
 
 
 /*========================================================================================
@@ -1667,19 +1663,24 @@ body .theme-btn-eighteen:hover:before {background: #FF7961;}
   margin-bottom: 0;
 }
 .vcamp-text-block-one .img-container {padding: 0 0 50px 110px;}
-.vcamp-text-block-one .quote-wrapper {
+
+.position-relative
+{
+  position: relative !important;
+}
+.quote-wrapper {
   position: absolute;
   width: 410px;
   background: #fff;
   border-radius: 14px;
-  bottom: 0;
+  bottom: -10rem;
   left: 0;
   z-index: 1;
   padding: 25px 30px 36px 48px;
   box-shadow: 0 40px 80px rgba(23, 42, 65, 0.06);
   animation: jumpTwo 8s infinite linear;
 }
-.vcamp-text-block-one .quote-wrapper blockquote {
+.quote-wrapper blockquote {
   font-size: 20px;
   line-height: 1.75em;
   padding-bottom: 16px;

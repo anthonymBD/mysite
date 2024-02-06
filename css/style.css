@@ -4630,7 +4630,7 @@ body .theme-btn-eighteen:hover:before {background: #FF7961;}
 .team-block-two .img-meta {overflow: hidden; border-radius: 15px; margin-bottom: 30px;}
 .team-block-two .img-meta img {border-radius: 15px; transition: all 0.5s ease-in-out;}
 .team-block-two .img-meta:hover img {transform: scale3d(1.1, 1.1, 1.1);}
-.team-block-two .name {font-size: 24px;}
+.team-block-two .name {font-size: 24px; color:white; padding-bottom:2rem;}
 .team-block-two p {color: #A7A7A7; margin-bottom: 0;}
 .team_slider_two .item {margin: 0 18px;}
 /*^^^^^^^^^^^^^^^^^^^^^ Feedback Section Ten ^^^^^^^^^^^^^^^^^^^^^^^^*/

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+     <meta name="description"
+         content="Professional Shopify developer skilled in HTML, CSS, JavaScript, email template development, responsive design, SEO optimization, Liquid theming, and front-end best practices. Showcase your brand with custom themes, interactive UI, and streamlined e-commerce solutions.">
+     <meta name="keywords"
+         content="Shopify, HTML, CSS, JavaScript, Email Templates, Front-End Development, Responsive Design, SEO, Liquid, E-commerce, Theme Development, Cross-Browser Compatibility">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
+	<!-- Main style sheet -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+	<!-- responsive style sheet -->
+	<link rel="stylesheet" type="text/css" href="css/responsive.css" media="all">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+ <header class="theme-main-menu sticky-menu theme-menu-one">
+     <div class="inner-content">
+         <div class="d-flex align-items-center justify-content-around">
+             <div class="logo"><a href="./index.html">Anthony Morlett</a>
+             </div>
+             <nav class="navbar navbar-expand-lg">
+                 <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse"
+                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                     aria-label="Toggle navigation">
+                     <span></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarNav">
+                     <ul class="navbar-nav">
+                         <li class="d-block d-lg-none">
+                             <div class="logo"><a href="./index.html">Anthony Morlett</a></div>
+                         </li>
+                         <li class="nav-item active">
+                             <a class="nav-link" href="./index.html">Home</a>
+
+                         </li>
+
+                         <li class="nav-item">
+                             <a class="nav-link" href="./index.html/#skills">Skills</a>
+
+                         </li>
+
+                         <li class="nav-item">
+                             <a class="nav-link" href="./index.html/#about">About</a>
+
+                         </li>
+
+                         <li class="nav-item">
+                             <a class="nav-link" href="./index.html/projects.html">Projects</a>
+
+                         </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="blog.html">Blog</a>
+
+                          </li>
+                         <li class="nav-item">
+                             <a class="nav-link" href="https://www.linkedin.com/in/anthony-morlett-47471039/"
+                                 target="_blank" rel="nofollow"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                     height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                     <path
+                                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                                 </svg></a>
+
+                         </li>
+                     </ul>
+
+                 </div>
+             </nav>
+
+         </div>
+     </div> <!-- /.inner-content -->
+ </header> <!-- /.theme-main-menu -->
+
+
+    <!-- Hero / Banner -->
+    <section>
+        <div class="inner-content text-center hero-spacing">
+            <div class="title-style-two">
+                <p class="upper-title">Welcome to</p>
+                <h1 class="title">My Blog</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+ <section class="blog-section-three padding-top-80 padding-bottom-80">
+     <div class="box-layout">
+         <div id="blog-posts"></div>
+     </div>
+ </section>
+
+            <!-- Pagination -->
+       
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="dark-bg padding-top-40 padding-bottom-40 text-center">
+        <p>&copy;anthony morlett Web dev/ shopify developer with liquid code in mind</p>
+    </footer>
+
+ <script>
+     fetch('posts.json')
+         .then(response => response.json())
+         .then(posts => {
+             const container = document.getElementById('blog-posts');
+             const row = document.createElement('div');
+             row.className = 'row';
+
+             posts.forEach(post => {
+                 const col = document.createElement('div');
+                 col.className = 'col-lg-4 col-md-6';
+                 col.innerHTML = `
+          <div class="card-style-one">
+            <div class="img-holder">
+              <img src="${post.image}" alt="Post Image">
+            </div>
+            <div class="blog-meta-three">
+              <div class="title">
+                <h3><a href="${post.url}">${post.title}</a></h3>
+              </div>
+              <p>${post.excerpt}</p>
+              <ul class="meta-info style-none">
+                <li>By <a href="#">${post.author}</a></li>
+                <li>${post.date}</li>
+              </ul>
+              <a class="theme-btn-two ripple-btn" href="${post.url}">Read More</a>
+            </div>
+          </div>
+        `;
+                 row.appendChild(col);
+             });
+
+             container.appendChild(row);
+         })
+         .catch(error => {
+             console.error("Error loading blog posts:", error);
+         });
+ </script>
+
+
+
+</body>
+
+</html>

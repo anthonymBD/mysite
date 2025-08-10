@@ -8,6 +8,7 @@ input,textarea {outline: none; box-shadow: none;transition: all 0.3s ease-in-out
 audio,video,canvas {max-width: 100%;}
 iframe {border: none !important;}
 
+.m-10{margin:10px;}
 .p0 {padding: 0 !important;}
 .m0 {margin:  0 !important;}
 .theme-mb-0 {margin-bottom: 0;}

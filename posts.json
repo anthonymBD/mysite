@@ -1,11 +1,4 @@
-[{
-        "title": "Case Study for dog bed website",
-        "excerpt": "How a Freelance UX Designer Transformed a Failing Dog Bed Landing Page (Real Case Study)",
-        "author": "Anthony Morlett",
-        "date": "August 7, 2025",
-        "image": "/images/assets/figmaHero.png",
-        "url": "blog/dog-case-study.html"
-    },
+[
         {
         "title": "Emergency Website Rebuild Case Study ",
         "excerpt": "How I rebuilt a hacked e-commerce website in 48 hours, creating a faster, easier-to-use dress shopping experience that customers actually prefer.",
@@ -13,5 +6,13 @@
         "date": "Nov 5, 2025",
         "image": "/images/assets/mjScreenshot.png",
         "url": "blog/nextjs-case-study.html"
+    },
+        {
+        "title": "Case Study for dog bed website",
+        "excerpt": "How a Freelance UX Designer Transformed a Failing Dog Bed Landing Page (Real Case Study)",
+        "author": "Anthony Morlett",
+        "date": "August 7, 2025",
+        "image": "/images/assets/figmaHero.png",
+        "url": "blog/dog-case-study.html"
     }
 ]
